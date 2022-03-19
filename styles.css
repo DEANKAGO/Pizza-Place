@@ -23,6 +23,7 @@ nav {
 nav ul li {
   display: inline-block;
   list-style-type: none;
+  background-color: darkgrey;
 }
 nav ul li a{
   text-decoration: none;
