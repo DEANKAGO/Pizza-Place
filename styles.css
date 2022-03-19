@@ -3,14 +3,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 150vh;
 }
 
-.main-div{
+.main-div {
   width: 80%;
   border: 2px solid grey;
-  height: 90vh;
+  border-radius: 10px;
+  height: 130vh;
   background-color: darkgray;
   position: relative;
-  margin-top: 30px;
 }
+
+nav .
