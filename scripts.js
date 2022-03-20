@@ -16,6 +16,14 @@ $(document).ready(function() {
   })
 
 
+  $("table").hide();
+  $(".buttons").hide();
+  $(".feedback").hide();
+  $(".btn-yes").hide();
+  $(".btn-no").hide();
+  $(".feedback h5 ").hide();
+
+
   $(".btn1").click(function(){
     var pizzaSize = $("#size option:selected").val();
     var pizzaToppings = $("#toppings option:selected").val();
@@ -37,6 +45,11 @@ $(document).ready(function() {
       this.total = total;
       this.orderNo = orderNo;
     }
+
+    $("table").show()
+    $(".buttons").show()
+    $(".btn1").hide()
+    $(".btn5").show()
 
 
     $(".btn2").click(function(){
@@ -84,6 +97,13 @@ $(document).ready(function() {
       $(".btn-no").hide();
       $(".feedback .pick-up").show();
     })
+
+    $(".btn3").click(function() {
+      var location = $(".feedback .pick-up input").val();
+      $(".feedback h4").show();
+      $(".feedback .pick-up").hide();
+      $(".feedback h5 span").html(location);
+    });
 
 
   
