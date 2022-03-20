@@ -47,3 +47,30 @@ img{
 footer{
   margin-top: 150px;
 }
+
+@media only screen and (max-width: 1080px) {
+  img{
+    height: 100px;
+    border-radius: 50%;
+  
+  }
+}
+@media only screen and (max-width: 780px) {
+  img{
+    height: 60px;
+    border-radius: 50%;
+  
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .heading{
+    font-size: 20px;
+  }
+  .heading2{
+    font-size: 15px;
+  }
+}
