@@ -22,17 +22,18 @@ $(document).ready(function() {
     var pizzaCrust = $("#crust option:selected").val();
     var total = parseInt(pizzaSize) + parseInt(pizzaToppings) + parseInt(pizzaCrust);
 
-    var grandTotal =0;
     var order = 1;
+    var grandTotal =0;
+    
 
 
-    function pizzaOrder(size, toppings, crust, total, orderNo) {
-      this.size = size;
-      this.toppings = toppings;
-      this.crust = crust;
-      this.total = total;
-      this.orderNo = orderNo;
-    }
+    // function pizza(size, toppings, crust, total, orderNo) {
+    //   this.size = size;
+    //   this.toppings = toppings;
+    //   this.crust = crust;
+    //   this.total = total;
+    //   this.orderNo = orderNo;
+    // }
 
 
 
@@ -42,15 +43,24 @@ $(document).ready(function() {
     $("#total").html(total);
 
 
+    function Pizza(size, toppings, crust, total, orderNo) {
+      this.size = size;
+      this.toppings = toppings;
+      this.crust = crust;
+      this.total = total;
+      this.orderNo = orderNo;
+    }
+
+
     $(".btn2").click(function(){
       var pizzaSize = $("#size option:selected").val();
       var pizzaToppings = $("#toppings option:selected").val();
       var pizzaCrust = $("#crust option:selected").val();
-      var total = parseInt(pizzaSize) + parseInt(pizzaTopping) + parseInt(pizzaCrust);
+      var total = parseInt(pizzaSize) + parseInt(pizzaToppings) + parseInt(pizzaCrust);
       order = order + 1;
       grandTotal = grandTotal + total;
 
-      var newPizza = new pizzaOrder(pizzaSize, pizzaTopping, pizzaCrust, order, total);
+      var newPizza = new Pizza(pizzaSize, pizzaTopping, pizzaCrust, total, order);
 
       var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size1">' + $("#size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings1">' + $("#toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust1">' + $("#crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
 
