@@ -1,6 +1,6 @@
 # Pizza-Place
 ##### By Martin Kago 
-### Pizza-place: 
+### Pizza-place: https://deankago.github.io/Pizza-Place/
 
 ## Table of Content
 
