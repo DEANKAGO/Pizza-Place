@@ -56,34 +56,37 @@ $(document).ready(function() {
     })
 
 
-    $(".btn.yes").click(function() {
-      $(".additional-info h5").hide();
-      $(".btn.yes").hide();
-      $(".btn.no").hide();
-      $(".additional-info .location").show();
-      $(".additional-info h3 span").html(grandTotal + 200);
-    })
-
-
-     $(".btn.no").click(function() {
-      $(".additional-info h5").hide();
-      $(".btn.yes").hide();
-      $(".btn.no").hide();
-      $(".additional-info .location").show();
-    })
-
-
-    $(".btn3.check-out").click(function() {
-      $(".btn.add-pizza").hide();
-      $(".btn.check-out").hide();
-      $(".additional-info").show();
-      $(".btn.yes").show();
-      $(".btn.no").show();
-      $(".additional-info .location").hide();
+    $(".btn5").click(function() {
+      $(".btn2").hide();
+      $(".btn5").hide();
+      $(".feedback").show();
+      $(".btn-yes").show();
+      $(".btn-no").show();
+      $(".feedback .pick-up").hide();
       grandTotal = grandTotal + total;
 
-      $(".additional-info h3 span").html(grandTotal);
+      $(".feedback h3 span").html(grandTotal);
     })
+
+
+    $(".btn-yes").click(function() {
+      $(".feedback h4").hide();
+      $(".btn-yes").hide();
+      $(".btn-no").hide();
+      $(".feedback .pick-up").show();
+      $(".feedback h3 span").html(grandTotal + 200);
+    })
+
+
+     $(".btn-no").click(function() {
+      $(".feedback h4").hide();
+      $(".btn-yes").hide();
+      $(".btn-no").hide();
+      $(".feedback .pick-up").show();
+    })
+
+
+  
 
   })
  
