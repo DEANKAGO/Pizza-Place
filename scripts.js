@@ -100,9 +100,9 @@ $(document).ready(function() {
 
     $(".btn3").click(function() {
       var location = $(".feedback .pick-up input").val();
-      $(".feedback h4").show();
+      $(".feedback h5").show();
       $(".feedback .pick-up").hide();
-      $(".feedback h5 span").html(location);
+      $(".feedback h5 span").html(pick-up);
     });
 
 
