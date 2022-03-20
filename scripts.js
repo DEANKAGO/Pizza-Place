@@ -26,7 +26,7 @@ $(document).ready(function() {
     var order = 1;
 
 
-    function order(size, toppings, crust, total, orderNo) {
+    function pizzaOrder(size, toppings, crust, total, orderNo) {
       this.size = size;
       this.toppings = toppings;
       this.crust = crust;
@@ -42,7 +42,21 @@ $(document).ready(function() {
     $("#total").html(total);
 
 
-    $(".btn2").click
+    $(".btn2").click(function(){
+      var pizzaSize = $("#size option:selected").val();
+      var pizzaToppings = $("#toppings option:selected").val();
+      var pizzaCrust = $("#crust option:selected").val();
+      var total = parseInt(pizzaSize) + parseInt(pizzaTopping) + parseInt(pizzaCrust);
+      order = order + 1;
+      grandTotal = grandTotal + total;
+
+      var newPizza = new pizzaOrder(pizzaSize, pizzaTopping, pizzaCrust, order, total);
+
+      var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size1">' + $("#size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings1">' + $("#toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust1">' + $("#crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+
+      $("#table1").append(newRow);
+
+    })
 
   })
  
