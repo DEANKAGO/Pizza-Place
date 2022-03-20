@@ -22,8 +22,18 @@ $(document).ready(function() {
     var pizzaCrust = $("#crust option:selected").val();
     var total = parseInt(pizzaSize) + parseInt(pizzaToppings) + parseInt(pizzaCrust);
 
-    var order = 1;
     var grandTotal =0;
+    var order = 1;
+
+
+    function order(size, toppings, crust, total, orderNo) {
+      this.size = size;
+      this.toppings = toppings;
+      this.crust = crust;
+      this.total = total;
+      this.orderNo = orderNo;
+    }
+
 
 
     $("#size1").html($("#size option:selected").text() + "-" +pizzaSize);
