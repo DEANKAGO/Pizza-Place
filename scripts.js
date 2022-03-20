@@ -75,6 +75,7 @@ $(document).ready(function() {
       $(".feedback").show();
       $(".btn-yes").show();
       $(".btn-no").show();
+      $(".feedback h2").hide()
       $(".feedback .pick-up").hide();
       grandTotal = grandTotal + total;
 
@@ -86,16 +87,19 @@ $(document).ready(function() {
       $(".feedback h4").hide();
       $(".btn-yes").hide();
       $(".btn-no").hide();
+      $(".feedback h2").hide()
       $(".feedback .pick-up").show();
       $(".feedback h3 span").html(grandTotal + 200);
     })
 
 
      $(".btn-no").click(function() {
-      $(".feedback h4").hide();
-      $(".btn-yes").hide();
-      $(".btn-no").hide();
-      $(".feedback .pick-up").show();
+      $(".feedback h4").hide()
+      $(".btn-yes").hide()
+      $(".btn-no").hide()
+      $(".feedback h2").show()
+      // $(".feedback .pick-up").show()
+
     })
 
     $(".btn3").click(function() {
