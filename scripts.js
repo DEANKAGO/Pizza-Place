@@ -41,6 +41,9 @@ $(document).ready(function() {
     $("#crust1").html($("#crust option:selected").text() + "-" +pizzaCrust);
     $("#total").html(total);
 
+
+    $(".btn2").click
+
   })
  
 
