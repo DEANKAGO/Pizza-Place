@@ -43,6 +43,7 @@ $(document).ready(function() {
       this.toppings = toppings;
       this.crust = crust;
       this.total = total;
+      this.orderNo = orderNo;
     }
 
     $("table").show()
